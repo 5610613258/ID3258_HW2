@@ -17,18 +17,19 @@ public class ComplexNumber {
     public static void main(String[] args) {
         Solution b = new Solution();
         InputOutput a = new InputOutput();
+        Matrix c = new Matrix();
         a.scan();
-        b.Substract(a.Re1, a.Im1, a.Re2, a.Im2);
-        b.Multiplication(a.Re1, a.Im1, a.Re2, a.Im2);
-        b.subRealPart(a.Re1, a.Re2);
-        b.mulRealPart(a.Re1, a.Im1, a.Re2, a.Im2);
-        b.subImagPart(a.Im1, a.Im2);
-        b.mulImagPart(a.Re1, a.Im1, a.Re2, a.Im2);
-        b.firMagnitude(a.Re1, a.Im1);
-        b.secMagnitude(a.Re2, a.Im2);
-        b.subMagnitude(a.Re1, a.Im1, a.Re2, a.Im2);
-        b.mulMagnitude(a.Re1, a.Im1, a.Re2, a.Im2);
-
+        b.Substract(a.Re, a.Im);
+        b.Multiplication(a.Re, a.Im);
+        b.subRealPart(a.Re);
+        b.mulRealPart(a.Re, a.Im);
+        b.subImagPart(a.Im);
+        b.mulImagPart(a.Re, a.Im);
+        b.firMagnitude(a.Re, a.Im);
+        b.secMagnitude(a.Re, a.Im);
+        b.subMagnitude(a.Re, a.Im);
+        b.mulMagnitude(a.Re, a.Im);
+        
         System.out.print("Substract : ");
         System.out.println(b.getSubstract());
         System.out.print("Multiplication : ");
@@ -49,7 +50,8 @@ public class ComplexNumber {
         System.out.printf("%.2f\n", b.getsubMagnitude());
         System.out.print("Multiplication Magnitude : ");
         System.out.printf("%.2f\n", b.getmulMagnitude());
-        b.compare(a.Re1, a.Im1, a.Re2, a.Im2);
+        b.compare(a.Re,a.Im);
+        c.sortMatrix(a.Re, a.Im);
     }
 
 }

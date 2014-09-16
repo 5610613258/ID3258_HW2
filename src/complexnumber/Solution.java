@@ -24,47 +24,47 @@ public class Solution {
     public double magsec;
 
     // method
-    public void Substract(double Re1, double Im1, double Re2, double Im2) {
-        sub = ((Re1 + Re2) + " + " + (Im1 + Im2) + "i");
+    public void Substract(double Re[], double Im[]) {
+        sub = ((Re[0] + Re[1]) + " + " + (Im[0] + Im[1]) + "i");
 
     }
 
-    public String Multiplication(double Re1, double Im1, double Re2, double Im2) {
-        return mul = (((Re1 * Re2) - (Im1 * Im2)) + " + " + ((Re1 * Im2) + (Re2 * Im1)) + "i");
+    public String Multiplication(double Re[], double Im[]) {
+        return mul = (((Re[0] * Re[1]) - (Im[0] * Im[1])) + " + " + ((Re[0] * Im[1]) + (Re[1] * Im[0])) + "i");
 
     }
 
-    public double subRealPart(double Re1, double Re2) {
-        return subRe = (Re1 + Re2);
+    public double subRealPart(double Re[]) {
+        return subRe = (Re[0] + Re[1]);
 
     }
 
-    public void mulRealPart(double Re1, double Im1, double Re2, double Im2) {
-        mulRe = ((Re1 * Re2) - (Im1 * Im2));
+    public void mulRealPart(double Re[], double Im[]) {
+        mulRe = ((Re[0] * Re[1]) - (Im[0] * Im[1]));
     }
 
-    public void subImagPart(double Im1, double Im2) {
-        subIm = (Im1 + Im2);
+    public void subImagPart(double Im[]) {
+        subIm = (Im[0] + Im[1]);
     }
 
-    public void mulImagPart(double Re1, double Im1, double Re2, double Im2) {
-        mulIm = ((Re1 * Im2) + (Re2 * Im1));
+    public void mulImagPart(double Re[], double Im[]) {
+        mulIm = ((Re[0] * Im[1]) + (Re[1] * Im[0]));
     }
 
-    public void subMagnitude(double Re1, double Im1, double Re2, double Im2) {
-        magsub = Math.sqrt(Math.pow((Re1 + Re2), 2) + Math.pow((Im1 + Im2), 2));
+    public void subMagnitude(double Re[], double Im[]) {
+        magsub = Math.sqrt(Math.pow((Re[0] + Re[1]), 2) + Math.pow((Im[0] + Im[1]), 2));
     }
 
-    public void mulMagnitude(double Re1, double Im1, double Re2, double Im2) {
-        magmul = Math.sqrt(Math.pow((Re1 * Re2) - (Im1 * Im2), 2) + Math.pow((Re1 * Im2) + (Re2 * Im1), 2));
+    public void mulMagnitude(double Re[], double Im[]) {
+        magmul = Math.sqrt(Math.pow((Re[0] * Re[1]) - (Im[0] * Im[1]), 2) + Math.pow((Re[0] * Im[1]) + (Re[1] * Im[0]), 2));
     }
 
-    public void firMagnitude(double Re1, double Im1) {
-        magfir = Math.sqrt(Math.pow(Re1, 2) + Math.pow(Im1, 2));
+    public void firMagnitude(double Re[], double Im[]) {
+        magfir = Math.sqrt(Math.pow(Re[0], 2) + Math.pow(Im[0], 2));
     }
 
-    public void secMagnitude(double Re2, double Im2) {
-        magsec = Math.sqrt(Math.pow(Re2, 2) + Math.pow(Im2, 2));
+    public void secMagnitude(double Re[], double Im[]) {
+        magsec = Math.sqrt(Math.pow(Re[1], 2) + Math.pow(Im[1], 2));
     }
 
     public double getfirMagnitude() {
@@ -106,17 +106,17 @@ public class Solution {
     public double getmulMagnitude() {
         return magmul;
     }
-    public void compare(double Re1,double Im1,double Re2, double Im2){
-        if(Re1 > Re2){
+    public void compare(double Re[],double Im[]){
+        if(Re[0] > Re[1]){
             System.out.println("First Real part is more than Second Real part.");
-        }else  if(Re1 < Re2){
+        }else  if(Re[0] < Re[1]){
             System.out.println("Second Real part is more than First Real part.");
         }else{
             System.out.println("First Real part is equal to Second Real part.");
         }
-        if(Im1 > Im2){
+        if(Im[0] > Im[1]){
             System.out.println("First Imaginary part is more than Second Imaginary part.");
-        }else if(Im1 < Im2){
+        }else if(Im[0] < Im[1]){
             System.out.println("Second Imaginary part is more than First Imaginary part.");
         }else{
             System.out.println("First Imaginary part is equal to Second Imaginary part.");
