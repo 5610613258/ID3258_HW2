@@ -17,6 +17,7 @@ public class ComplexNumber {
     public static void main(String[] args) {
         Solution b = new Solution();
         InputOutput a = new InputOutput();
+        
         Matrix c = new Matrix();
         a.scan();
         b.Add(a.Re, a.Im);
@@ -33,7 +34,7 @@ public class ComplexNumber {
         b.addMagnitude(a.Re, a.Im);
         b.subMagnitude(a.Re, a.Im);
         b.mulMagnitude(a.Re, a.Im);
-
+ 
         System.out.print("Add : ");
         System.out.println(b.getAdd());
         System.out.print("Substract : ");
@@ -64,6 +65,9 @@ public class ComplexNumber {
         System.out.printf("%.2f\n", b.getmulMagnitude());
         b.compare(a.Re, a.Im);
         c.sortMatrix(a.Re, a.Im);
+        c.sortaddMatrix(a.Re, a.Im);
+        c.sortsubMatrix(a.Re, a.Im);
+        c.sortmulMatrix(a.Re, a.Im);
     }
 
 }

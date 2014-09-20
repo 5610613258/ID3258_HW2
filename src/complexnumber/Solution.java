@@ -29,11 +29,19 @@ public class Solution {
 
     // method
     public void Add(double Re[], double Im[]) {
-        add = ((Re[0] + Re[1]) + " + " + (Im[0] + Im[1]) + "i");
+        if ((Im[0] + Im[1]) < 0) {
+            add = ((Re[0] + Re[1]) + " - " + (-1 * (Im[0] + Im[1])) + "i");
+        } else {
+            add = ((Re[0] + Re[1]) + " + " + (Im[0] + Im[1]) + "i");
+        }
     }
 
     public void Substract(double Re[], double Im[]) {
-        sub = ((Re[0] - Re[1]) + " + " + (Im[0] - Im[1]) + "i");
+        if ((Im[0] - Im[1]) < 0) {
+            sub = ((Re[0] - Re[1]) + " - " + (-1 * (Im[0] - Im[1])) + "i");
+        } else {
+            sub = ((Re[0] - Re[1]) + " + " + (Im[0] - Im[1]) + "i");
+        }
 
     }
 
